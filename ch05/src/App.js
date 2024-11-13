@@ -1,8 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link, RouterProvider } from "react-router-dom";
 import Main from "./component/sub1/Main";
 import OutletMain from "./component/sub2/OutletMain";
+import ParamsMain from "./component/sub3/ParamsMain";
+import root from "./router/root";
 /*
   날짜 : 2024/11/13
   이름 : 박수정
@@ -27,9 +29,13 @@ function App() {
       <hr />
 
       <h4>Router 데이터 전송</h4>
+      <BrowserRouter>
+        <ParamsMain />
+      </BrowserRouter>
       <hr />
 
       <h4>사용자 정의 Router</h4>
+      <RouterProvider router={root} />
     </div>
   );
 }
